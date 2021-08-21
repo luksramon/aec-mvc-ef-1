@@ -1,0 +1,93 @@
+﻿@model IEnumerable<aec_mvc_entity_framework.Models.Api>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Dados API</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Cpf
+            </th>
+            <th>
+                Nome
+            </th>
+            <th>
+                Nascimento
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Telefone
+            </th>
+            <th>
+                Logradouro
+            </th>
+            <th>
+                Complemento
+            </th>
+            <th>
+                Numero
+            </th>
+            <th>
+                Bairro
+            </th>
+            <th>
+                Cidade
+            </th>
+            <th>
+                Cep
+            </th>
+            <th>
+                Estado
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in (List<Api>)ViewBag.Api) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cpf)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Logradouro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Complemento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Numero)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
